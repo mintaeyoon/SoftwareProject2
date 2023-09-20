@@ -1,15 +1,15 @@
 #define PIN_LED 13
-unsigned int count;
+unsigned int count = 0;
 bool ledState = false;
 
 void setup() {
-  pinMode(PIN_LED, OUTPUT);
   Serial.begin(115200);
   while (!Serial) {
     ;
   }
   Serial.println("Hello World!");
-  count = 0;
+  
+  pinMode(PIN_LED, OUTPUT);
   digitalWrite(PIN_LED, LOW);
 }
 
